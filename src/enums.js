@@ -1,0 +1,40 @@
+module.exports = {
+	flexWrap: {
+		'wrap': 'wrap',
+		'no': 'no-wrap',
+		'no-wrap': 'no-wrap',
+	},
+	justifyContent: {
+		'start': 'flex-start',
+		'flex-start': 'flex-start',
+		'end': 'flex-end',
+		'flex-end': 'flex-end',
+		'center': 'center',
+		'between': 'space-between',
+		'space-between': 'space-between',
+		'around': 'space-around',
+		'space-around': 'space-around',
+		'evenly': 'space-evenly',
+		'space-evenly': 'space-evenly',
+	},
+	alignItems: {
+		'start': 'flex-start',
+		'flex-start': 'flex-start',
+		'end': 'flex-end',
+		'flex-end': 'flex-end',
+		'center': 'center',
+		'stretch': 'stretch',
+	},
+	alignContent: {
+		'start': 'flex-start',
+		'flex-start': 'flex-start',
+		'end': 'flex-end',
+		'flex-end': 'flex-end',
+		'center': 'center',
+		'stretch': 'stretch',
+		'between': 'space-between',
+		'space-between': 'space-between',
+		'around': 'space-around',
+		'space-around': 'space-around',
+	}
+}
