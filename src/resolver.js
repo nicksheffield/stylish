@@ -148,4 +148,4 @@ const convert = (...args) => {
 
 export default convert
 
-export const createStyleableComponent = (Component) => (props) => <Component {...props} style={convert(props.style)} />
+export const createStylishComponent = (Component) => (props) => <Component {...props} style={convert(props.style)} />
