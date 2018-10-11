@@ -1,5 +1,5 @@
 const React = require('react')
-const StyleSheet = require('react-native').StyleSheet
+// const StyleSheet = require('react-native').StyleSheet
 const flatten = require('ramda/src/flatten')
 const transformers = require('./transformers')
 
@@ -22,7 +22,8 @@ const resolve = (str) => {
 		})
 		.reduce((acc, obj) => ({...acc, ...obj}), {})
 
-	cache[sig] = StyleSheet.create({ styles }).styles
+	// cache[sig] = StyleSheet.create({ styles }).styles
+	cache[sig] = styles
 
 	return cache[sig]
 }
@@ -35,6 +36,15 @@ const convert = (...args) => {
 	return list
 }
 
-export default convert
+module.exports = {
+	default: convert,
+	createStylishComponent: (Component) => {
+		return (props) => {
+			return React.createElement(Component, {
+				...props,
+				style: convert(props.style)
+			})
+		}
+	}
+}
 
-export const createStylishComponent = (Component) => (props) => <Component {...props} style={convert(props.style)} />

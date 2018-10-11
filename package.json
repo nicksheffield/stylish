@@ -19,6 +19,7 @@
   "license": "ISC",
   "dependencies": {
     "react": "16.5.0",
-    "ramda": "^0.25.0"
+    "ramda": "^0.25.0",
+    "react-native": "0.56.0"
   }
 }
