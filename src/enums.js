@@ -1,17 +1,12 @@
 module.exports = {
-	'wrap': 'wrap',
-	'no': 'no-wrap',
-	'no-wrap': 'no-wrap',
-	'start': 'flex-start',
-	'flex-start': 'flex-start',
-	'end': 'flex-end',
-	'flex-end': 'flex-end',
-	'center': 'center',
-	'between': 'space-between',
-	'space-between': 'space-between',
-	'around': 'space-around',
-	'space-around': 'space-around',
-	'evenly': 'space-evenly',
-	'space-evenly': 'space-evenly',
-	'stretch': 'stretch',
+	list: {
+		'no': 'no-wrap',
+		'start': 'flex-start',
+		'end': 'flex-end',
+		'between': 'space-between',
+		'around': 'space-around',
+		'evenly': 'space-evenly',
+	},
+	add: function(x, v) { this.list[x] = v },
+	get: function(x) { return this.list[x] }
 }

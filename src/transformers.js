@@ -1,4 +1,5 @@
 const enums = require('./enums')
+const colors = require('./colors')
 
 const unit = (x) => /^[\d\.]+$/.test(x) ? +x : x
 
@@ -42,16 +43,16 @@ const unit = (x) => /^[\d\.]+$/.test(x) ? +x : x
  */
 
 module.exports = {
-	'bg':     (x) => ({ backgroundColor: colors[x] || x }),
+	'bg':     (x) => ({ backgroundColor: colors.get(x) || x }),
 	'col':    (_) => ({ flexDirection: 'column' }),
 	'col-r':  (_) => ({ flexDirection: 'column-reverse' }),
 	'row':    (_) => ({ flexDirection: 'row' }),
 	'row-r':  (_) => ({ flexDirection: 'row-reverse' }),
-	'fw':     (x) => ({ flexWrap: enums.flexWrap[x] }),
-	'jc':     (x) => ({ justifyContent: enums.justifyContent[x] }),
-	'ai':     (x) => ({ alignItems: enums.alignItems[x] }),
-	'as':     (x) => ({ alignSelf: enums.alignItems[x] }),
-	'ac':     (x) => ({ alignContent: enums.alignContent[x] }),
+	'fw':     (x) => ({ flexWrap: enums.get[x] || x }),
+	'jc':     (x) => ({ justifyContent: enums.get[x] || x }),
+	'ai':     (x) => ({ alignItems: enums.get[x] || x }),
+	'as':     (x) => ({ alignSelf: enums.get[x] || x }),
+	'ac':     (x) => ({ alignContent: enums.get[x] || x }),
 	'f':      (x) => ({ flex: +x }),
 	'h':      (x) => ({ height: unit(x) }),
 	'w':      (x) => ({ width: unit(x) }),
@@ -63,7 +64,7 @@ module.exports = {
 	'e':      (x) => ({ elevation: +x }),
 	'of':     (x) => ({ overflow: x }),
 
-	'txt':    (x) => ({ color: colors[x] || x }),
+	'txt':    (x) => ({ color: colors.get(x) || x }),
 	'ff':     (x) => ({ fontFamily: x.replace(/\-/g, ' ') }),
 	'fz':     (x) => ({ fontSize: unit(x) }),
 	'bold':   (_) => ({ fontWeight: 'bold' }),
@@ -97,11 +98,11 @@ module.exports = {
 	'pl':     (x) => ({ paddingLeft: unit(x) }),
 
 	'rad':    (x) => ({ borderRadius: +x }),
-	'b-c':    (x) => ({ borderColor: colors[x] || x }),
-	'bt-c':   (x) => ({ borderTopColor: colors[x] || x }),
-	'br-c':   (x) => ({ borderRightColor: colors[x] || x }),
-	'bb-c':   (x) => ({ borderBottomColor: colors[x] || x }),
-	'bl-c':   (x) => ({ borderLeftColor: colors[x] || x }),
+	'b-c':    (x) => ({ borderColor: colors.get(x) || x }),
+	'bt-c':   (x) => ({ borderTopColor: colors.get(x) || x }),
+	'br-c':   (x) => ({ borderRightColor: colors.get(x) || x }),
+	'bb-c':   (x) => ({ borderBottomColor: colors.get(x) || x }),
+	'bl-c':   (x) => ({ borderLeftColor: colors.get(x) || x }),
 	'b-w':    (x) => ({ borderWidth: unit(x) }),
 	'bt-w':   (x) => ({ borderTopWidth: unit(x) }),
 	'br-w':   (x) => ({ borderRightWidth: unit(x) }),

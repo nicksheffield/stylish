@@ -1,14 +1,19 @@
 const stylish = require('./index').default
+const stylishColors = require('./index').colors
 const assert = require('assert').strict
 
+stylishColors.add('primary', '#DD0000')
 
-const i = stylish('bold italic fz:15 w:100% h:50')
+
+const i = stylish('bold italic fz:15 w:100% h:50 txt:red bg:primary')
 const o = {
+	backgroundColor: '#DD0000',
 	fontWeight: 'bold',
-	fontStyle: 'italic',
 	fontSize: 15,
-	width: '100%',
-	height: 50
+	height: 50,
+	fontStyle: 'italic',
+	color: 'red',
+	width: '100%'
 }
 
 try {

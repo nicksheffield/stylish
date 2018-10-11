@@ -2,6 +2,8 @@ const React = require('react')
 // const StyleSheet = require('react-native').StyleSheet
 const flatten = require('ramda/src/flatten')
 const transformers = require('./transformers')
+const colors = require('./colors')
+const enums = require('./enums')
 
 const cache = {}
 
@@ -38,6 +40,8 @@ const convert = (...args) => {
 
 module.exports = {
 	default: convert,
+	colors: colors,
+	enums: enums,
 	createStylishComponent: (Component) => {
 		return (props) => {
 			return React.createElement(Component, {
