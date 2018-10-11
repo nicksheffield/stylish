@@ -1,5 +1,4 @@
 const React = require('react')
-// const StyleSheet = require('react-native').StyleSheet
 const flatten = require('ramda/src/flatten')
 const transformers = require('./transformers')
 const colors = require('./colors')
@@ -8,11 +7,7 @@ const enums = require('./enums')
 const cache = {}
 
 const resolve = (str) => {
-	const sig = str.split(' ').sort().join(' ')
-
-	if (cache[sig]) return cache[sig]
-
-	const styles = sig
+	const styles = str
 		.split(' ')
 		.map(item => item.split(':'))
 		.map(([prop, value]) => {
@@ -24,10 +19,7 @@ const resolve = (str) => {
 		})
 		.reduce((acc, obj) => ({...acc, ...obj}), {})
 
-	// cache[sig] = StyleSheet.create({ styles }).styles
-	cache[sig] = styles
-
-	return cache[sig]
+	return styles
 }
 
 const convert = (...args) => {
