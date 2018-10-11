@@ -5,20 +5,21 @@ const assert = require('assert').strict
 stylishColors.add('primary', '#DD0000')
 
 
-const i = stylish('bold italic fz:15 w:100% h:50 txt:red bg:primary')
+const i = stylish('bold italic fz:15 w:100% h:50 txt:red bg:primary jc:between')
 const o = {
 	backgroundColor: '#DD0000',
 	fontWeight: 'bold',
 	fontSize: 15,
 	height: 50,
 	fontStyle: 'italic',
+	justifyContent: 'space-between',
 	color: 'red',
 	width: '100%'
 }
 
 try {
 	assert.deepStrictEqual(i, o)
-	console.log('pass')
+	console.log('pass', i)
 } catch(e) {
 	console.log('fail', e)
 }
