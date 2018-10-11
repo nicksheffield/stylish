@@ -45,7 +45,8 @@ stylish.addEnum('sans', '"Helvetica Neue", Helvetica, Arial, sans-serif')
 ---
 
 ### addColor(name, color)
-Adds a color to the list of available colors. Only some properties will use values from this pool. eg, color, backgroundColor, borderTopColor etc
+Adds a color to the list of available colors. Only some properties will use values from this pool. eg, color, backgroundColor, borderTopColor etc.
+
 Colors can be in any textual format that react native would support anyway.
 
 eg:
@@ -73,3 +74,4 @@ export const Text = createStylishComponent(RNText)
 
  - Add proper unit tests
  - Add caching
+ - List all the shorthand property names, and some of the default enums and styles
