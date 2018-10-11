@@ -1,4 +1,4 @@
-const stylish = require('./index').default
+const stylish = require('./index')
 const assert = require('assert').strict
 
 stylish.addColor('primary', '#DD0000')
