@@ -1,7 +1,6 @@
 const React = require('react')
-const { StyleSheet } from 'react-native'
-const flatten from 'ramda/src/flatten'
-
+const StyleSheet = require('react-native').StyleSheet
+const flatten = require('ramda/src/flatten')
 const enums = require('./enums')
 
 const colors = []
