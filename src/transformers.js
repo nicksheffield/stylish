@@ -1,7 +1,7 @@
 const enums = require('./enums')
 const colors = require('./colors')
 
-const unit = (x) => enums.get(x) || (/^[\d\.\-]+$/.test(x) ? +x : x)
+const unit = (x) => enums.get(x) || (/^(-?\d+\.{1,1}\d+)|(-?\d+)$/.test(x) ? +x : x)
 
 /**
  * Not implemented:

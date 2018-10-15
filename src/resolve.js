@@ -1,7 +1,10 @@
-const React = require('react')
-const flatten = require('ramda/src/flatten')
 const transformers = require('./transformers')
 const styles = require('./styles')
+
+
+const flatten = (arr) => arr.reduce((acc, item) => {
+	return [...acc, ...(item instanceof Array ? flatten(item) : [item])]
+}, [])
 
 
 const convert = (str) => str
