@@ -11,12 +11,13 @@ stylish.addStyle({
 // stylish.addStyle('my-style2', 'txt:red bg:primary')
 
 
-const i2 = stylish.resolve('my-style')
+const i2 = stylish.resolve('my-style mb:-10')
 const o2 = {
 	borderBottomWidth: 1,
 	borderBottomColor: '#eee',
 	color: 'red',
-	backgroundColor: '#DD0000'
+	backgroundColor: '#DD0000',
+	marginBottom: -10
 }
 
 try {
