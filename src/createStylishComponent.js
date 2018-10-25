@@ -3,10 +3,10 @@ const resolve = require('./resolve')
 
 
 module.exports = (Component) => {
-	return (props) => {
+	return React.forwardRef((props, ref) => {
 		return React.createElement(Component, {
-			...props,
+			...props, ref,
 			style: resolve(props.style)
 		})
-	}
+	})
 }
