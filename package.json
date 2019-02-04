@@ -1,23 +1,23 @@
 {
-  "name": "stylish",
-  "version": "0.0.1",
-  "description": "A tool for shorthanding react native styles",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nicksheffield/stylish.git"
-  },
-  "bugs": {
-    "url": "https://github.com/nicksheffield/stylish/issues"
-  },
-  "homepage": "https://github.com/nicksheffield/stylish#readme",
-  "keywords": [],
-  "author": "Nick Sheffield <numbereft@gmail.com>",
-  "license": "ISC",
-  "dependencies": {
-    "react": "16.5.0"
-  }
+	"name": "@nicksheffield/stylish",
+	"version": "0.0.1",
+	"description": "A tool for shorthanding react native styles",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nicksheffield/stylish.git"
+	},
+	"bugs": {
+		"url": "https://github.com/nicksheffield/stylish/issues"
+	},
+	"homepage": "https://github.com/nicksheffield/stylish#readme",
+	"keywords": [],
+	"author": "Nick Sheffield <numbereft@gmail.com>",
+	"license": "ISC",
+	"dependencies": {
+		"react": "16.5.0"
+	}
 }
